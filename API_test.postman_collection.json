@@ -1,0 +1,449 @@
+{
+  "info": {
+    "_postman_id": "38c965e5-c99e-4fa0-aa69-a4d8393310e7",
+    "name": "API test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25345589"
+  },
+  "item": [
+    {
+      "name": "Response type id is passed",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Validate id\", function () {\r",
+              "    const response = pm.response.json();\r",
+              "    pm.expect(response[0].id).to.be.a(\"number\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "        {\r\n        \"userId\": 1,\r\n        \"id\": 1,\r\n        \"title\": \"dolorem dolore est ipsam\",\r\n        \"body\": \"dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae\"\r\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/?id=18",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            ""
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "18"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Response type id is failed",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Validate id\", function () {\r",
+              "    const response = pm.response.json();\r",
+              "    pm.expect(response[0].id).to.be.a(\"string\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "        {\r\n        \"userId\": 1,\r\n        \"id\": 1,\r\n        \"title\": \"dolorem dolore est ipsam\",\r\n        \"body\": \"dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae\"\r\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/?id=18",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            ""
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "18"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Return request 200",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Return data with id 18",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "        {\r\n        \"userId\": 1,\r\n        \"id\": 1,\r\n        \"title\": \"dolorem dolore est ipsam\",\r\n        \"body\": \"dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae\"\r\n        }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/?id=18",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            ""
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "18"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Return data with userId 5",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/?userId=5",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            ""
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Input new data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Visualization Script",
+              "// Visualization Script",
+              "const template = `",
+              "<style>",
+              "  body { font-family: Arial, sans-serif; padding: 16px; }",
+              "  table { border-collapse: collapse; width: 100%; }",
+              "  th, td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }",
+              "  th { background-color: #f26b3a; color: white; }",
+              "  tr:nth-child(even) { background-color: #f9f9f9; }",
+              "  tr:hover { background-color: #f1f1f1; }",
+              "</style>",
+              "<table>",
+              "  <thead>",
+              "    <tr><th>Field</th><th>Value</th></tr>",
+              "  </thead>",
+              "  <tbody>",
+              "    {{#each data}}",
+              "    <tr><td>{{key}}</td><td>{{value}}</td></tr>",
+              "    {{/each}}",
+              "  </tbody>",
+              "</table>",
+              "`;",
+              "",
+              "function createPayload() {",
+              "  const response = pm.response.json();",
+              "  const data = Object.keys(response).map(key => ({ key: key, value: String(response[key]) }));",
+              "  return { data };",
+              "}",
+              "",
+              "pm.visualizer.set(template, createPayload());"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "        {\r\n        \"userId\": 11,\r\n        \"id\": 101,\r\n        \"title\": \"dolorem dolore est ipsam\",\r\n        \"body\": \"dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae\"\r\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Return request 201",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "        {\r\n        \"userId\": 11,\r\n        \"id\": 106,\r\n        \"title\": \"kfjskfhksf surkytue jkshfjeh sksjke\",\r\n        \"body\": \"dltklstejgtjk sjhkjshs nsshgjks smngksbgs gsnbgshhbgds gghbhbgdhgbjg sgkjsbgjsbg ggjhdgjbg gngbsjkgjksg gbsgsg nshgjshgjsg sgsdkgnsgsg gkjshgjsgs gskgldkg\"\r\n        }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Input with empty data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"The field is required\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.title).to.be.a('string').and.not.be.empty;\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "        {\r\n        \"userId\": 11,\r\n        \"id\": 106,\r\n        \"title\": \"\",\r\n        \"body\": \"dltklstejgtjk sjhkjshs nsshgjks smngksbgs gsnbgshhbgds gghbhbgdhgbjg sgkjsbgjsbg ggjhdgjbg gngbsjkgjksg gbsgsg nshgjshgjsg sgsdkgnsgsg gkjshgjsgs gskgldkg\"\r\n        }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
